@@ -1,3 +1,7 @@
+ext {
+    jedis = '2.6.2'
+}
+
 dependencies {
     compile "log4j:log4j:1.2.17"
     compile "org.slf4j:slf4j-api:1.7.7"
@@ -19,6 +23,8 @@ dependencies {
     compile "com.fasterxml.jackson.datatype:jackson-datatype-joda:$jackson_joda"
     compile "org.apache.httpcomponents:httpclient:$httpclient"
     compile "org.apache.httpcomponents:httpmime:$httpclient"
+
+    compile "redis.clients:jedis:$jedis"
 
     compile project(':db')
 

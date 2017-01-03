@@ -6,6 +6,9 @@
     <properties resource="db.properties">
         <property name="defaultExecutorType" value="BATCH"/>
     </properties>
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+    </settings>
     <objectFactory type="com.github.kiwiwin.db.mybatis.ObjectFactory"/>
     <environments default="development">
         <environment id="development">

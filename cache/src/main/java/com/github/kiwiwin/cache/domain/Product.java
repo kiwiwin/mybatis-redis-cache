@@ -1,6 +1,8 @@
 package com.github.kiwiwin.cache.domain;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
     private long id;
     private String description;
 
