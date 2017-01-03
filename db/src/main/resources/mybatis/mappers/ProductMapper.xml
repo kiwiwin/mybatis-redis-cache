@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.kiwiwin.cache.mybatis.mapper.ProductMapper">
+    <insert id="create" useGeneratedKeys="true" keyProperty="product.id" keyColumn="id">
+        INSERT INTO PRODUCTS (
+        DESCRIPTION
+        ) VALUE (
+        #{product.description}
+        );
+    </insert>
+
+    <select id="find" resultMap="records.product">
+        SELECT
+        <include refid="columns.product"/>
+        FROM PRODUCTS P
+        WHERE
+        ID = #{id};
+    </select>
+</mapper>

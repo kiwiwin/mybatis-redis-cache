@@ -1,0 +1,5 @@
+rootProject.name = 'mybatis-redis-cache'
+
+include 'db'
+include 'cache'
+

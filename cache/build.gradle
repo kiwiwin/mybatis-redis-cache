@@ -1,0 +1,31 @@
+dependencies {
+    compile "log4j:log4j:1.2.17"
+    compile "org.slf4j:slf4j-api:1.7.7"
+    compile "org.slf4j:jcl-over-slf4j:1.7.7"
+    compile "org.slf4j:slf4j-log4j12:1.7.7"
+
+    compile "joda-time:joda-time:$joda_time"
+    compile "javax.servlet:javax.servlet-api:$servlet_api"
+
+    compile "org.mybatis:mybatis:$mybatis"
+    compile "org.glassfish.hk2:guice-bridge:$guice_bridge"
+
+    compile "javax.ws.rs:javax.ws.rs-api:$jaxrs"
+    compile "org.glassfish.jersey.core:jersey-server:$jersey"
+    compile "org.glassfish.jersey.containers:jersey-container-servlet-core:$jersey"
+    compile "org.glassfish.jersey.containers:jersey-container-grizzly2-http:$jersey"
+    compile "org.glassfish.jersey.media:jersey-media-json-jackson:$jersey"
+    compile "org.glassfish.grizzly:grizzly-http-servlet:$grizzly"
+    compile "com.fasterxml.jackson.datatype:jackson-datatype-joda:$jackson_joda"
+    compile "org.apache.httpcomponents:httpclient:$httpclient"
+    compile "org.apache.httpcomponents:httpmime:$httpclient"
+
+    compile project(':db')
+
+    testCompile "org.glassfish.jersey.connectors:jersey-apache-connector:$jersey"
+    testCompile "org.glassfish.jersey.test-framework.providers:jersey-test-framework-provider-grizzly2:$jersey"
+    testCompile "org.glassfish.jersey.test-framework:jersey-test-framework-core:$jersey"
+    testCompile "com.jayway.jsonpath:json-path:$json_path"
+
+    testCompile "org.concordion:concordion:$concordion"
+}
