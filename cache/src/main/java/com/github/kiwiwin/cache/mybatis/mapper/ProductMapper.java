@@ -1,6 +1,6 @@
 package com.github.kiwiwin.cache.mybatis.mapper;
 
-import com.github.kiwiwin.cache.core.Product;
+import com.github.kiwiwin.cache.domain.Product;
 import org.apache.ibatis.annotations.Param;
 
 public interface ProductMapper {

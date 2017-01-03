@@ -1,6 +1,6 @@
 package com.github.kiwiwin.cache;
 
-import com.github.kiwiwin.cache.core.Product;
+import com.github.kiwiwin.cache.domain.Product;
 import com.github.kiwiwin.cache.mybatis.mapper.ProductMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;

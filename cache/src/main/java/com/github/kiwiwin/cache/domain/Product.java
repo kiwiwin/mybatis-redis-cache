@@ -1,4 +1,4 @@
-package com.github.kiwiwin.cache.core;
+package com.github.kiwiwin.cache.domain;
 
 public class Product {
     private long id;
