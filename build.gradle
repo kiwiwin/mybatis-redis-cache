@@ -17,7 +17,7 @@ subprojects {
         slf4j = '1.7.7'
 
         guice = '3.0'
-        mybatis = '3.2.7'
+        mybatis = '3.4.2'
         mybatis_guice = '3.6'
         guice_bridge = '2.4.0-b09'
 

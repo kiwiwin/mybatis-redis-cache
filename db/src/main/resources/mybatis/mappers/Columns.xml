@@ -5,6 +5,7 @@
 <mapper namespace="columns">
     <sql id="product">
         P.ID AS P_ID,
-        P.DESCRIPTION AS P_DESCRIPTION
+        P.DESCRIPTION AS P_DESCRIPTION,
+        P.COLOR AS P_COLOR
     </sql>
 </mapper>

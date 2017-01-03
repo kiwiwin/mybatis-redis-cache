@@ -14,7 +14,7 @@ public class ObjectFactory extends DefaultObjectFactory {
     @SuppressWarnings(value = "unchecked")
     public <T> T create(Class<T> type, List<Class<?>> constructorArgTypes, List<Object> constructorArgs) {
         T object = super.create(type, constructorArgTypes, constructorArgs);
-        locator.inject(object);
+//        locator.inject(object);
         return object;
     }
 }

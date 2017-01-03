@@ -6,5 +6,8 @@
     <resultMap id="product" type="com.github.kiwiwin.cache.domain.Product">
         <id property="id" column="P_ID"/>
         <result property="description" column="P_DESCRIPTION"/>
+        <association property="color" javaType="com.github.kiwiwin.cache.domain.Color">
+            <result property="color" column="P_COLOR"/>
+        </association>
     </resultMap>
 </mapper>

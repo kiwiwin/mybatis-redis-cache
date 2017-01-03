@@ -10,6 +10,10 @@
         <setting name="cacheEnabled" value="true"/>
     </settings>
     <objectFactory type="com.github.kiwiwin.db.mybatis.ObjectFactory"/>
+    <plugins>
+        <plugin interceptor="com.github.kiwiwin.db.mybatis.ExamplePlugin">
+        </plugin>
+    </plugins>
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC">
@@ -24,8 +28,8 @@
                 <property name="driver.encoding" value="UTF8"/>
                 <property name="poolPingEnabled" value="true"/>
                 <property name="poolPingQuery" value="SELECT 1"/>
-                <property name="poolMaximumActiveConnections" value="50" />
-                <property name="poolMaximumIdleConnections" value="5" />
+                <property name="poolMaximumActiveConnections" value="50"/>
+                <property name="poolMaximumIdleConnections" value="5"/>
                 <property name="poolPingConnectionsNotUsedFor" value="180000"/>
             </dataSource>
         </environment>

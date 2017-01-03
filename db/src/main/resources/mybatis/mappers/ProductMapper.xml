@@ -11,9 +11,11 @@
 
     <insert id="create" useGeneratedKeys="true" keyProperty="product.id" keyColumn="id">
         INSERT INTO PRODUCTS (
-        DESCRIPTION
+        DESCRIPTION,
+        COLOR
         ) VALUE (
-        #{product.description}
+        #{product.description},
+        #{product.color.color}
         );
     </insert>
 

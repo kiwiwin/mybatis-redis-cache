@@ -1,13 +1,21 @@
 package com.github.kiwiwin.cache.redis;
 
+import com.google.inject.Injector;
 import org.apache.ibatis.cache.Cache;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
+import javax.inject.Inject;
 import java.util.Map;
 import java.util.concurrent.locks.ReadWriteLock;
 
+/**
+ * NOTE Settings of cache (like eviction strategy, read write..etc.) in section above are not applied when using Custom Cache.
+ */
 public class RedisCache implements Cache {
+    @Inject
+    protected Injector injector;
+
     private final ReadWriteLock readWriteLock = new DummyReadWriteLock();
 
     private String id;
@@ -54,7 +62,8 @@ public class RedisCache implements Cache {
         return execute(new RedisCallback() {
             @Override
             public Object doWithRedis(Jedis jedis) {
-                return SerializeUtil.unserialize(jedis.hget(id.getBytes(), key.toString().getBytes()));
+                final Object unserialize = SerializeUtil.unserialize(jedis.hget(id.getBytes(), key.toString().getBytes()));
+                return unserialize;
             }
         });
     }
